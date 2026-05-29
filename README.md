@@ -1,14 +1,14 @@
 # Manual SVM Digits Classification
 
-A mathematical implementation of a **Multi-Class Support Vector Machine (SVM) with a Linear Kernel** built completely from scratch. This project avoids high-level machine learning libraries (such as scikit-learn) to focus entirely on foundational mathematical programming, optimization theory, and vectorization techniques.
+A mathematical implementation of a **Multi-Class Support Vector Machine (SVM) with a Linear Kernel** built completely from scratch. This project avoids high-level machine learning libraries (such a[...]
 
 ## SOAR Framework Overview
 
 ### Situation
-As part of the advanced Machine Learning curriculum (INF372) at the University of Yaoundé I, the task was to build a robust classifier capable of recognizing handwritten digits ($0$ to $9$) from a subset of the MNIST dataset. The training pipeline utilizes $3,000$ normalized $32\times32$ grayscale images.
+As part of the advanced Machine Learning curriculum (INF372) at the University of Yaoundé I, the task was to build a robust classifier capable of recognizing handwritten digits ($0$ to $9$) from a[...]
 
 ### Obstacle
-Modern ML pipelines obscure structural mechanics behind abstract library calls (e.g., `model.fit()`). The core challenge of this project was to implement multi-class classification ($10$ separate targets) under rigid low-resource optimization constraints without relying on external machine learning frameworks. This required manual formulation of convex quadratic programming problems, explicit Gram Matrix calculation, and manual implementation of a multi-class strategy.
+Modern ML pipelines obscure structural mechanics behind abstract library calls (e.g., `model.fit()`). The core challenge of this project was to implement multi-class classification ($10$ separate [...]
 
 ### Action
 The implementation was executed through a rigorous mathematical translation workflow using strictly NumPy and a convex optimization modeling framework (`cvxpy`):
@@ -21,8 +21,8 @@ The implementation was executed through a rigorous mathematical translation work
 
 ### Results
 * **Deterministic Metrics:** Achieved clear, stable decision boundaries across highly ambiguous handwritten samples.
-* **Feature Interpretability:** Reshaping the manual weight vectors ($w$) back into the native $32\times32$ dimensions provides spatial heatmaps that clearly reveal the specific pixels and strokes the model uses to distinguish boundaries.
-* **Error Analysis Mapping:** Generated raw confidence distributions ($s_k(x) = w_k^T x + b_k$) and structural confusion matrices, isolating exact morphological overlap regions (e.g., distinguishing features between $1$/$7$ and $3$/$8$).
+* **Feature Interpretability:** Reshaping the manual weight vectors ($w$) back into the native $32\times32$ dimensions provides spatial heatmaps that clearly reveal the specific pixels and strokes[...]
+* **Error Analysis Mapping:** Generated raw confidence distributions ($s_k(x) = w_k^T x + b_k$) and structural confusion matrices, isolating exact morphological overlap regions (e.g., distinguishi[...]
 
 ---
 
@@ -50,24 +50,29 @@ The framework is trained and evaluated on a customized, normalized subset of han
 ### Installation
 Clone the repository and install the structural dependencies:
 ```bash
-git clone [https://github.com/KamdemSamuel/Convex-Optimization-SVM-Scratch.git](https://github.com/KamdemSamuel/Convex-Optimization-SVM-Scratch.git)
+git clone https://github.com/KamdemSamuel/Convex-Optimization-SVM-Scratch.git
 cd Convex-Optimization-SVM-Scratch
 pip install numpy cvxpy matplotlib
-Usage
+```
+
+## Usage
 Run the interactive workspace notebook to view the mathematical proofs, execution stages, and visualization layers:
 
-Bash
+```bash
 jupyter notebook Manual_SVM_Digits_Classification.ipynb
-Repository Structure
-Plaintext
+```
+
+## Repository Structure
+```
 Convex-Optimization-SVM-Scratch/
 ├── Manual_SVM_Digits_Classification.ipynb  # Main structural math and code implementation
 ├── slide_TP5.pdf                           # Academic presentation and analytical slides
 ├── README.md                               # Project documentation
 └── LICENSE                                 # License file
-Authors
-Tchuenche Kamdem Samuel Yedidya - LinkedIn
+```
 
+## Authors
+[Tchuenche Kamdem Samuel Yedidya](https://www.linkedin.com/in/kamdem-samuel-yedidya/) - LinkedIn
 
-License
+## License
 This project is licensed under the MIT License.
